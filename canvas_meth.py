@@ -20,7 +20,7 @@ def motion(x, y):
         c.move(ball, x_dir, y_dir)
         print(c.coords(ball))
         if c.coords(ball)[2] != x or c.coords(ball)[3] != y:
-            root.after(10, motion(x, y))
+            root.after(10, lambda: motion(x, y))
 
 
 
